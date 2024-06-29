@@ -16,7 +16,7 @@ Golang 在 GC 的演进过程中也经历了很多次变革，Go V1.3 之前的�
 
 ### 1 标记清除算法的具体步骤
 第一步，暂停程序业务逻辑，分类出可达和不可达的对象，然后做上标记。
-
+<img src="https://cdn.learnku.com/uploads/images/202205/23/58489/9OEzONr3qs.png!large">
 https://cdn.learnku.com/uploads/images/202205/23/58489/9OEzONr3qs.png!large
 
 图中表示是程序与对象的可达关系，目前程序的可达对象有对象 1-2-3，对象 4-7 等五个对象。
