@@ -1,5 +1,5 @@
 # 知识点1：defer的执行顺序
-多个defer出现的时候，它是一个“栈”的关系，也就是先进后出。一个函数中，写在前面的defer会比写在后面的defer调用的晚。
+多个defer出现的时候，**它是一个“栈”的关系，也就是先进后出**。一个函数中，写在前面的defer会比写在后面的defer调用的晚。
 示例代码
 
 ```
@@ -73,7 +73,7 @@ return func called
 defer func called
 ```
 
-结论为：return之后的语句先执行，defer后的语句后执行
+结论为：**return之后的语句先执行，defer后的语句后执行**
 # 知识点3：函数的返回值初始化
 该知识点不属于defer本身，但是调用的场景却与defer有联系，所以也算是defer必备了解的知识点之一。
 如 ： ```func DeferFunc1(i int) (t int) {}```
@@ -224,7 +224,8 @@ defer: panic 之前1, 捕获异常
 main 正常结束
 ```
 
-defer 最大的功能是 panic 后依然有效
+**defer 最大的功能是 panic 后依然有效**
+
 所以defer可以保证你的一些资源一定会被关闭，从而避免一些异常出现的问题。
 # 知识点6: defer中包含panic
 编译执行下面代码会出现什么?
